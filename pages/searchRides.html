@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../images/wheel.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>GoWheelie | Search for rides</title>
+  </head>
+  <body>
+    <nav class="ridesNav">
+      <img src="/images/logo.png" alt="ridesNavLogo" />
+      <div class="navContent">
+        <a>
+          <img src="/images/publishRide.png" alt="publishRide svg" />
+          <span>Publish a ride</span>
+        </a>
+        <p>
+          <img src="/images/svgs/user.svg" alt="user" />
+          <span> Abhishek </span>
+        </p>
+      </div>
+    </nav>
+    <div class="searchRide">
+      <h1>Your pick of rides at low prices</h1>
+      <form action="" class="searchRideForm">
+        <input type="text" placeholder="Leaving from..." />
+        <input type="text" placeholder="Going to..." />
+        <input type="date" class="dateInput" />
+        <select class="noOfPassengers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <button type="submit" class="searchBtn">Search</button>
+      </form>
+      <!-- Search Results -->
+    </div>
+    <div class="searchRideResults"></div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

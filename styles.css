@@ -93,14 +93,6 @@ html {
   z-index: -1;
 }
 
-@media screen and (max-width: 720px) {
-  .carImg {
-    height: 60%;
-    right: -18rem;
-    bottom: -4rem;
-  }
-}
-
 /* SIGN UP */
 
 .signUp {
@@ -117,27 +109,6 @@ html {
   flex-direction: column;
   gap: 6.4rem;
   text-align: center;
-}
-
-@media screen and (max-width: 1250px) {
-  .signUpContent img {
-    display: none;
-  }
-
-  .signUp {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 2rem;
-    margin: 1rem;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .signUpForm {
-    width: 30rem;
-    padding: 2.8rem 3.2rem;
-  }
 }
 
 /* SIGN UP - FORM */
@@ -224,27 +195,6 @@ html {
   text-align: center;
 }
 
-@media screen and (max-width: 1250px) {
-  .loginContent img {
-    display: none;
-  }
-
-  .login {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 2rem;
-    margin: 1rem;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .loginForm {
-    width: 30rem;
-    padding: 2.8rem 3.2rem;
-  }
-}
-
 /* LOGIN - FORM */
 .loginForm {
   width: 35rem;
@@ -310,4 +260,228 @@ html {
 
 .btnLoginForm:hover {
   opacity: 0.8;
+}
+
+/* searchRides CSS */
+
+/* ride nav */
+.ridesNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 12.6rem;
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.ridesNav img {
+  height: 3.8rem;
+}
+
+.ridesNav .navContent {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.ridesNav .navContent a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ridesNav .navContent a img {
+  height: 2.8rem;
+}
+
+.ridesNav .navContent p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ridesNav .navContent p img {
+  height: 3.6rem;
+}
+
+/* ride search */
+.searchRide {
+  height: 32rem;
+  background: url("/images/svgs/rides.svg");
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4rem;
+  padding-bottom: 2.8rem;
+  align-items: center;
+}
+
+.searchRide h1 {
+  font-size: 4.8rem;
+  color: var(--color-white);
+}
+
+.searchRide .searchRideForm {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.searchRide .searchRideForm input,
+.searchRide .searchRideForm button {
+  font-size: 1.8rem;
+  color: var(--color-grey-dark);
+}
+
+.searchRide .searchRideForm select {
+  font-size: 1.8rem;
+  width: 97%;
+  color: var(--color-grey-dark);
+}
+
+.searchRideForm input:first-child {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.searchRideForm button {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.searchRide .searchRideForm input,
+.searchRide .searchRideForm select {
+  border: none;
+  padding: 1.2rem 2rem;
+}
+
+.searchRide .searchRideForm input:focus,
+select:focus {
+  outline: none;
+}
+
+.searchRide .searchRideForm button {
+  border: none;
+  padding: 1.2rem 4.8rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 550;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1250px) {
+  .signUpContent img {
+    display: none;
+  }
+
+  .signUp {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .loginContent img {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ridesNav {
+    padding: 1.2rem 4rem;
+  }
+
+  .searchRide {
+    padding: 4rem;
+    gap: 12rem;
+  }
+
+  .searchRide .searchRideForm {
+    width: 79%;
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--color-grey-dark);
+  }
+
+  .searchRideForm input:first-child,
+  .searchRideForm button {
+    border-radius: 2rem;
+  }
+
+  .searchRideForm input,
+  .searchRideForm select {
+    border-radius: 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .carImg {
+    height: 60%;
+    right: -18rem;
+    bottom: -4rem;
+  }
+
+  .signUpForm {
+    width: 30rem;
+    padding: 2.8rem 3.2rem;
+  }
+
+  .loginForm {
+    width: 30rem;
+    padding: 2.8rem 3.2rem;
+  }
+
+  .ridesNav {
+    padding: 1rem 2.4rem;
+  }
+
+  .ridesNav .navContent p {
+    display: none;
+  }
+
+  .searchRide {
+    padding: 4rem;
+    gap: 6rem;
+  }
+
+  .searchRide h1 {
+    font-size: 3.6rem;
+  }
+
+  .searchRide .searchRideForm {
+    width: 100%;
+  }
+
+  .searchRide .searchRideForm select {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .searchRide {
+    gap: 4rem;
+    background-repeat: no-repeat;
+  }
+
+  .searchRide h1 {
+    font-size: 2rem;
+  }
+
+  .searchRide .searchRideForm select {
+    width: 92%;
+  }
 }
