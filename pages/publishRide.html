@@ -8,33 +8,18 @@
     <title>GoWheelie | Search for rides</title>
   </head>
   <body>
-    <nav class="ridesNav">
-      <img src="/images/logo.png" alt="ridesNavLogo" />
-      <div class="navContent">
-        <a href="./publishRide.html">
-          <img src="/images/publishRide.png" alt="publishRide svg" />
-          <span>Publish a ride</span>
-        </a>
-        <p>
-          <img src="/images/svgs/user.svg" alt="user" />
-          <span> Abhishek </span>
-        </p>
-      </div>
-    </nav>
-    <div class="searchRide">
-      <h1>Your pick of rides at low prices</h1>
-      <form action="" class="searchRideForm">
+    <div class="publishRide">
+      <form action="store.jsp" class="publishRideForm">
         <div>
           <img src="../images/svgs/location.svg" alt="location" />
           <input type="text" placeholder="Leaving from..." />
         </div>
+
         <div>
           <img src="../images/svgs/location.svg" alt="location" />
           <input type="text" placeholder="Going to..." />
         </div>
-        <div>
-          <input type="date" class="dateInput" />
-        </div>
+
         <div>
           <img src="../images/svgs/seats.svg" alt="seats" />
           <select class="noOfPassengers">
@@ -46,12 +31,21 @@
             <option value="6">6</option>
           </select>
         </div>
-        <button type="submit" class="searchBtn">Search</button>
-      </form>
-      <!-- Search Results -->
-    </div>
-    <div class="searchRideResults"></div>
 
-    <script src="/script.js"></script>
+        <div>
+          <img src="../images/svgs/rupees.svg" alt="rupees" />
+          <input type="text" placeholder="Price/seat" />
+        </div>
+
+        <button class="btnLoginForm" type="submit">Publish a ride</button>
+      </form>
+      <div class="publishRideContent">
+        <h1>
+          Become a BlaBlaCar driver and save on travel costs by sharing your
+          ride with passengers.
+        </h1>
+        <img src="/images/city-car.png" alt="cityCar" />
+      </div>
+    </div>
   </body>
 </html>

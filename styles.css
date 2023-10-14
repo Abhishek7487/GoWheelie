@@ -19,6 +19,7 @@ html {
   --color-grey-mid: #dddddd;
   --color-grey-dark: #9b9b9b;
   --color-text-dark: #000000;
+  --color-text-light: #054652;
 }
 
 /* Global Styles */
@@ -289,6 +290,8 @@ html {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  text-decoration: none;
+  color: var(--color-primary);
 }
 
 .ridesNav .navContent a img {
@@ -325,7 +328,19 @@ html {
 
 .searchRide .searchRideForm {
   display: flex;
-  gap: 0.1rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+}
+
+.searchRideForm div {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-right: 1px solid var(--color-grey-mid);
+}
+
+.searchRideForm div img {
+  height: 1.6rem;
 }
 
 .searchRide .searchRideForm input,
@@ -336,13 +351,7 @@ html {
 
 .searchRide .searchRideForm select {
   font-size: 1.8rem;
-  width: 97%;
   color: var(--color-grey-dark);
-}
-
-.searchRideForm input:first-child {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
 }
 
 .searchRideForm button {
@@ -369,7 +378,105 @@ select:focus {
   font-weight: 550;
 }
 
+/* Publish Ride */
+
+/* PUBLISH */
+.publishRide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4rem 12rem;
+  height: 100vb;
+  background-color: var(--color-primary-light);
+  place-items: center;
+}
+
+.publishRideContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  text-align: center;
+}
+
+.publishRideContent h1 {
+  font-size: 4rem;
+  color: var(--color-text-light);
+}
+
+/* PUBLISH - FORM */
+.publishRideForm {
+  width: 35rem;
+  height: max-content;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.8rem;
+  padding-bottom: 8rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.publishRideForm div {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-grey-mid);
+}
+
+.publishRideForm div img {
+  height: 1.8rem;
+}
+
+.publishRideForm div input {
+  font-size: 1.6rem;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  color: var(--color-grey-dark);
+}
+
+.publishRideForm div input:focus {
+  outline: none;
+}
+
+.publishRideForm div select {
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--color-grey-light);
+  padding: 0.6rem 1rem;
+}
+
+.publishRideForm div .noOfPassengers {
+  width: 100%;
+  background-color: transparent;
+}
+
+.btnReset {
+  align-self: self-start;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+.btnLoginForm {
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnLoginForm:hover {
+  opacity: 0.8;
+}
+
+/* //////////////////////////////////////// */
 /* MEDIA QUERIES */
+/* //////////////////////////////////////// */
 
 @media screen and (max-width: 1250px) {
   .signUpContent img {
@@ -410,21 +517,49 @@ select:focus {
   .searchRide .searchRideForm {
     width: 79%;
     flex-direction: column;
-    gap: 0;
+    gap: 1.2rem;
     padding: 2rem;
     background-color: var(--color-white);
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--color-grey-dark);
   }
 
-  .searchRideForm input:first-child,
-  .searchRideForm button {
+  .searchRideForm input:first-child {
     border-radius: 2rem;
+  }
+
+  .searchRideForm button {
+    border-radius: 1rem;
   }
 
   .searchRideForm input,
   .searchRideForm select {
     border-radius: 2rem;
+  }
+
+  .searchRide .searchRideForm select {
+    width: 97%;
+  }
+
+  .searchRideForm div {
+    border: none;
+    border-bottom: 1px solid var(--color-grey-mid);
+  }
+
+  .publishRideContent img {
+    display: none;
+  }
+
+  .publishRideContent h1 {
+    font-size: 3.6rem;
+  }
+
+  .publishRide {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
   }
 }
 
@@ -483,5 +618,9 @@ select:focus {
 
   .searchRide .searchRideForm select {
     width: 92%;
+  }
+
+  .publishRideContent h1 {
+    font-size: 2.6rem;
   }
 }
